@@ -57,18 +57,18 @@ if (!file.exists(profiles_file)) {
 
 ##### This code reads the oscillating genes table from a local file and stores it in a variable called `oscillating_genes`.
 
-oscillating_genes <- read.csv("oscillating-genes_normalized-profiles.tsv", 
+oscillating_genes <- read.csv(profiles_file, 
                               sep = "\t", row.names = 1, header = TRUE)
 
 #### Unit test : check that the file has been properly downloaded, is a tab-separated file, and is not empty #####
 #### This code checks if the downloaded file exists, is a tab-separated file, and is not empty. If any of these conditions are not met, it stops the execution with an error message.
-if (!file.exists("oscillating-genes_normalized-profiles.tsv")) {
+if (!file.exists(profiles_file)) {
   stop("File does not exist.")
 }
-if (tools::file_ext("oscillating-genes_normalized-profiles.tsv") != "tsv") {
+if (tools::file_ext(profiles_file) != "tsv") {
   stop("File is not a tab-separated file.")
 }
-if (file.size("oscillating-genes_normalized-profiles.tsv") == 0) {
+if (file.size(profiles_file) == 0) {
   stop("File is empty.")
 }
 ##### Display the dimensions of the oscillating genes table and check that it conforms to the expectation: 50 colums and 1705 rows #####
