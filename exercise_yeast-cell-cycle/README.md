@@ -1,9 +1,10 @@
 # Using a generative AI to implement a script for bioanalysis
 
-This folder contains the R implementation of the execise realised during the workshop "Using generative AI to implement a script for bioanalysis", organised in Paris on June 13, 2025. 
+This folder describes the practical execise for the workshop "Using generative AI to implement a script for bioanalysis"
 
+## Source article
 
-**Source article:** Kelliher, C. M., Leman, A. R., Sierra, C. S. & Haase, S. B. 
+- Kelliher, C. M., Leman, A. R., Sierra, C. S. & Haase, S. B. 
 Investigating Conservation of the Cell-Cycle-Regulated Transcriptional Program in the Fungal Pathogen, Cryptococcus neoformans. 
 PLoS Genet 12, e1006453 (2016). 
 DOI [10.1371/journal.pgen.1006453](https://doi.org/10.1371/journal.pgen.1006453)
