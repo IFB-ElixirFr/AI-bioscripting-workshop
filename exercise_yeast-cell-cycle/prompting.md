@@ -30,9 +30,9 @@ Can you help me with this process?
 ## Second prompt: providing the figure and data table
 
 I upload 
-- the figure 
+- the figure
 - the md5sum
-- the data table in csv format. 
+- the data table in tsv format
 
 Can you already perform a first analysis and return a synthetic report about the figure and the source data?
 

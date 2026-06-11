@@ -27,7 +27,7 @@ Edition 2026, le 12 juin, sur le campus des Grands Moulins, 75013 Paris.
 
 | Intervenant | Titre | Diaporama |
 |----------|------------------------------------|:----:|
-| Bertrand Cosson et Jacques van Helden | Introduction à la journée | [pdf]() |
+| Bertrand Cosson et Jacques van Helden | Introduction à la journée | [pdf](slides/1-1_intro_colloque-IA_2026-06-12.pdf) |
 | Pierre Poulain | Science ouverte, données et IA : automatiser l’annotation scientifique  | [pdf]() |
 | Guillaume Gautreau | Hands-on workshop on genomic language models  |  [pdf]() |
 | Romuald Marin | VeromeCh\@t | [pdf]() |
