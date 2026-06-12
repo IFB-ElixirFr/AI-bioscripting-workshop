@@ -64,6 +64,37 @@ ask_ai <- function(prompt, model = MODELE_CHOISI, max_tokens = 2000) {
   invisible(result$choices[[1]]$message$content)
 }
 
+# Fonction AVEC mémoire de conversation
+historique <- list()
+
+ask_ai_memo <- function(prompt, model = MODELE_CHOISI, max_tokens = 2000) {
+  api_key <- Sys.getenv("OPENROUTER_API_KEY")
+  
+  # Ajouter le message de l'utilisateur à l'historique
+  historique[[length(historique) + 1]] <<- list(role = "user", content = prompt)
+  
+  response <- request("https://openrouter.ai/api/v1/chat/completions") |>
+    req_headers("Authorization" = paste("Bearer", api_key),
+                "content-type"  = "application/json") |>
+    req_body_json(list(model = model, max_tokens = max_tokens,
+                       messages = historique)) |>
+    req_perform()
+  
+  result <- response |> resp_body_json()
+  reponse_texte <- result$choices[[1]]$message$content
+  
+  # Ajouter la réponse de l'IA à l'historique
+  historique[[length(historique) + 1]] <<- list(role = "assistant", content = reponse_texte)
+  
+  cat(reponse_texte)
+  invisible(reponse_texte)
+}
+
+# Pour repartir d'une conversation vide
+reset_historique <- function() {
+  historique <<- list()
+}
+
 # Fonction pour questions avec image (Claude, GPT-4o, Gemini uniquement)
 # Pour simplifier, placez la figure dans votre répertoire de travail RStudio
 ask_ai_vision <- function(prompt, image_path, model = MODELE_CHOISI, max_tokens = 2000) {
