@@ -40,6 +40,69 @@ Vidéos de la matinée: (à ajouter)
 
 ## Ateliers pratiques de l'après-midi
 
+## Déroulé de la sance
+
+### Phase 1 — Conceptualisation avec l’IA (≈ 45 min)
+
+*L’IA comme consultant : elle analyse le problème et propose une approche avant toute programmation.*
+
+**Ce que vous demandez à l’IA :**
+
+- Soumettez la figure heatmap et la table de comptage
+- Demandez-lui de proposer une approche d’analyse pour produire ce type de figure à partir de ces données
+- Demandez-lui de produire un flowchart (organigramme) de la procédure proposée
+- Demandez-lui de décomposer en étapes et de détailler pour chaque étape les paramètres importants et les choix possibles
+- Discutez en groupe : les choix proposés vous semblent-ils biologiquement pertinents ?
+
+**Questions guides :** 
+
+- Quelle normalisation est proposée, et pourquoi ? 
+- Comment les gènes sont-ils ordonnés ? 
+- Quels paramètres de visualisation sont suggérés ? - Y a-t-il des alternatives proposées ? Lesquelles choisissez-vous et pourquoi ?
+
+**Notez les paramètres retenus**
+
+- ils constituent votre cahier des charges pour la Phase 2.
+
+### Phase 2 — Implémentation (≈ 60 min)
+
+*L’IA comme assistant programmeur : elle code ce que vous lui dictez, étape par étape.*
+
+1. Validez collectivement le plan issu de la Phase 1 avant de demander le code
+2. Demandez le code étape par étape, en précisant à chaque fois :
+    - Le langage (R ou Python)
+    - Les paramètres retenus en Phase 1
+    - Vos exigences : documentation, gestion des erreurs
+
+3. Exécutez sur le cluster IFB (JupyterHub ou RStudio) ou Pléiade
+4. Itérez jusqu’à obtenir une figure satisfaisante
+5. Comparez visuellement votre figure à la cible
+
+**Conseil :** ne demandez pas tout le code en un seul prompt — avancez étape par étape et validez chaque bloc avant de passer au suivant.
+
+### Phase 3 — Contrôle négatif (≈ 15 min)
+
+*Le pipeline détecte-t-il de la périodicité là où il n’y en a pas ?*
+
+- Ouvrez le fichier cell-cycle_SCERE_iabioscripting2_permuted.txt fourni par les organisateurs
+- Ce fichier contient les mêmes gènes et les mêmes valeurs d’expression que le fichier original, mais les 50 points temporels ont été permutés aléatoirement (seed = 42) — la périodicité temporelle est donc détruite
+- Dans votre script, remplacez uniquement le nom du fichier d’entrée par le fichier permuté — ne modifiez rien d’autre
+- Relancez le script et observez la figure produite
+- Si la figure présente encore des patterns de périodicité → votre pipeline génère des illusions. Si elle est plate/aléatoire → il est robuste.
+- Demandez à l’IA d’interpréter le résultat : que signifie biologiquement la présence ou l’absence de structure sur données permutées ?
+
+### Phase 4 — Révélation et comparaison (≈ 30 min)
+
+- L’article est distribué — l’IA compare votre approche avec celle des auteurs.
+- Recevez l’article complet + matériel supplémentaire (Kelliher et al., PLoS Genet 2016)
+- Soumettez-les à l’IA avec votre script et votre flowchart
+- Demandez-lui de comparer les deux approches :
+- Points communs entre votre procédure et celle de l’article
+- Différences et leurs conséquences sur le résultat
+- Avantages et limites de chaque approche
+- Préparez 2-3 points clés à partager en mise en commun
+
+
 
 ### Atelier 1 : Reproductibilité et FAIRisation
 
@@ -51,8 +114,6 @@ Vidéos de la matinée: (à ajouter)
 - Github pages: <https://ifb-elixirfr.github.io/AI-bioscripting-workshop/> 
 - Data table [oscillating-genes_1705_normalized-profiles.tsv](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/oscillating-genes_1705_normalized-profiles.tsv): normalized counts (RPKM) for 1705 oscillating genes of *Saccharomyces cerevisiae*
 - [Figure 2a of the article](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/heatmap_yeast_cell-cycle.png)
-
-
 
 
 ----
