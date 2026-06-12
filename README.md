@@ -37,10 +37,25 @@ Edition 2026, le 12 juin, sur le campus des Grands Moulins, 75013 Paris.
 
 Vidéos de la matinée: (à ajouter)
 
+## Organisation
+
+### Programme et inscription
+
+- <https://iabioscripting2.sciencesconf.org>|
+
+### Dépôt du code sur github
+
+- Organisation: **[A COMPLETER]**
+- Nomenclature pour votre entrepôt: **ia-bioscript26-XX**  *en remplaçant XX par votre numéro de groupe*
+
+
+### Retour d'expérience
+
+- Formulaire de collecte en cours de synthèse
+
 
 ## Ateliers pratiques de l'après-midi
 
-## Déroulé de la sance
 
 ### Phase 1 — Conceptualisation avec l’IA (≈ 45 min)
 
@@ -58,7 +73,8 @@ Vidéos de la matinée: (à ajouter)
 
 - Quelle normalisation est proposée, et pourquoi ? 
 - Comment les gènes sont-ils ordonnés ? 
-- Quels paramètres de visualisation sont suggérés ? - Y a-t-il des alternatives proposées ? Lesquelles choisissez-vous et pourquoi ?
+- Quels paramètres de visualisation sont suggérés ? 
+- Y a-t-il des alternatives proposées ? Lesquelles choisissez-vous et pourquoi ?
 
 **Notez les paramètres retenus**
 
@@ -80,7 +96,7 @@ Vidéos de la matinée: (à ajouter)
 
 **Conseil :** ne demandez pas tout le code en un seul prompt — avancez étape par étape et validez chaque bloc avant de passer au suivant.
 
-### Phase 3 — Contrôle négatif (≈ 15 min)
+### Phase 3a — Contrôle négatif (≈ 15 min)
 
 *Le pipeline détecte-t-il de la périodicité là où il n’y en a pas ?*
 
@@ -91,17 +107,22 @@ Vidéos de la matinée: (à ajouter)
 - Si la figure présente encore des patterns de périodicité → votre pipeline génère des illusions. Si elle est plate/aléatoire → il est robuste.
 - Demandez à l’IA d’interpréter le résultat : que signifie biologiquement la présence ou l’absence de structure sur données permutées ?
 
+### Phase 3b — Qualité du code (≈ 15 min)
+
+- Demander à une IA d’améliorer la qualité globale du code et garantir sa maintenabilité
+
+
 ### Phase 4 — Révélation et comparaison (≈ 30 min)
 
-- L’article est distribué — l’IA compare votre approche avec celle des auteurs.
-- Recevez l’article complet + matériel supplémentaire (Kelliher et al., PLoS Genet 2016)
-- Soumettez-les à l’IA avec votre script et votre flowchart
-- Demandez-lui de comparer les deux approches :
-- Points communs entre votre procédure et celle de l’article
-- Différences et leurs conséquences sur le résultat
-- Avantages et limites de chaque approche
-- Préparez 2-3 points clés à partager en mise en commun
+*L’article est distribué — l’IA compare votre approche avec celle des auteurs.*
 
+1. Recevez l’article complet + matériel supplémentaire (Kelliher et al., PLoS Genet 2016)
+2. Soumettez-les à l’IA avec votre script et votre flowchart
+3. Demandez-lui de comparer les deux approches :
+    - Points communs entre votre procédure et celle de l’article
+    - Différences et leurs conséquences sur le résultat
+    - Avantages et limites de chaque approche
+4. Préparez 2-3 points clés à partager en mise en commun
 
 
 ### Atelier 1 : Reproductibilité et FAIRisation
@@ -118,12 +139,7 @@ Vidéos de la matinée: (à ajouter)
 
 ----
 
-## Organisation
-
-## Programme et inscription
-
-- <https://iabioscripting2.sciencesconf.org>|
-
+## Contributions
 
 ### Institutions
 
