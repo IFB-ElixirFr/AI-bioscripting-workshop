@@ -27,12 +27,12 @@ Edition 2026, le 12 juin, sur le campus des Grands Moulins, 75013 Paris.
 
 | Intervenant | Titre | Diaporama |
 |----------|------------------------------------|:----:|
-| Bertrand Cosson et Jacques van Helden | Introduction à la journée | [pdf](slides/1-1_intro_colloque-IA_2026-06-12.pdf) |
-| Pierre Poulain | Science ouverte, données et IA : automatiser l’annotation scientifique  | [pdf]() |
-| Guillaume Gautreau | Hands-on workshop on genomic language models  |  [pdf]() |
-| Romuald Marin | VeromeCh\@t | [pdf]() |
-| Approches émergentes : API, IA agentique, écosystèmes de développement | Baptiste Rousseau | [pdf]() |
-| Thomas Denecker & Jacques van Helden | Démonstration en mode RetEx | [pdf]() |
+| Bertrand Cosson et Jacques van Helden | Introduction à la journée | [pdf](slides/2026/1-1_intro_colloque-IA_2026-06-12.pdf) |
+| Pierre Poulain | Science ouverte, données et IA : automatiser l’annotation scientifique  |  |
+| Guillaume Gautreau | Hands-on workshop on genomic language models  |  [pdf](slides/2026/1-3_Guillaume_Gautreau_gLM.pdf) |
+| Romuald Marin | VeromeCh\@t |  |
+| Approches émergentes : API, IA agentique, écosystèmes de développement | Baptiste Rousseau | [pdf](slides/2026/1-5_AI-emerging-approaches_Baptiste-Rousseau_2026-06-12.pdf) |
+| Thomas Denecker & Jacques van Helden | Démonstration en mode RetEx |  |
 
 Vidéos de la matinée: (à ajouter)
 
