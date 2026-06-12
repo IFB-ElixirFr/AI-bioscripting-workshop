@@ -2,9 +2,9 @@
 # Atelier IA & Bioscripting 2026 — Guide essentiel ask_ai()
 # 12 juin 2026
 # ============================================================
-# Copiez et exécutez chaque bloc avec Ctrl+Enter (Cmd+Enter sur Mac)
+# Run the blocks one by one
+# BEWARE: some commands have to be edited manually (e.g. your API key, you questions)
 # ============================================================
-
 
 # ── BLOC 1 : INITIALISATION ─────────────────────────────────
 # À exécuter UNE SEULE FOIS en début de session
@@ -13,7 +13,8 @@ library(httr2)
 library(jsonlite)
 library(base64enc)
 
-# Remplacer "VOTRE_CLE_ICI" par l'identifiant de la clé API disponible sur le canal TCHAP "iabioscripting2-TP-participants-BA"
+# Remplacer "VOTRE_CLE_ICI" par l'identifiant de la clé API 
+# disponible sur le canal TCHAP "iabioscripting2-TP-participants-BA"
 Sys.setenv(OPENROUTER_API_KEY = "VOTRE_CLE_ICI")
 
 # Choisissez votre modèle — décommentez celui de votre groupe
@@ -23,7 +24,32 @@ MODELE_CHOISI <- "openai/gpt-4o"               # GPT-4o (OpenAI)
 # MODELE_CHOISI <- "google/gemini-pro-1.5"        # Gemini Pro 1.5
 # MODELE_CHOISI <- "meta-llama/llama-3.3-70b-instruct"  # Llama 3.3 (gratuit)
 
-#Executez les lignes suivantes pour enregistrer les 2 fonctions :
+## Directories
+workdir <- getwd()
+message("Working directory: ", workdir)
+analysis_dir <- file.path(workdir, "analysis")
+message("Analysis directory: ", analysis_dir)
+dir.create(analysis_dir, showWarnings = FALSE, recursive = TRUE)
+
+# vérifiez que le fichier fig2A_Scerevisiae_heatmap_cible.png est présent, snon téléchargez-le
+fig2a <- file.path(analysis_dir, "heatmap_yeast_cell-cycle.png")
+if (file.exists(fig2a)) {
+  message("heatmap file\t", fig2a)
+} else {
+  message("First download the files with the script download_cell-cycle_files.R")
+  stop("missing file\t", fig2a)
+}
+
+# vérifiez que cell-cycle_SCERE_iabioscripting2.txt apparaît
+data_table <- file.path(analysis_dir, "oscillating-genes_1705_normalized-profiles.tsv")
+if (file.exists(data_table)) {
+  message("data table\t", data_table)
+} else {
+  message("First download the files with the script download_cell-cycle_files.R")
+  stop("missing file\t", data_table)
+}
+
+
 # Fonction pour questions texte
 ask_ai <- function(prompt, model = MODELE_CHOISI, max_tokens = 2000) {
   api_key <- Sys.getenv("OPENROUTER_API_KEY")
@@ -39,7 +65,7 @@ ask_ai <- function(prompt, model = MODELE_CHOISI, max_tokens = 2000) {
 }
 
 # Fonction pour questions avec image (Claude, GPT-4o, Gemini uniquement)
-# La figure doit être dans votre répertoire de travail RStudio
+# Pour simplifier, placez la figure dans votre répertoire de travail RStudio
 ask_ai_vision <- function(prompt, image_path, model = MODELE_CHOISI, max_tokens = 2000) {
   api_key <- Sys.getenv("OPENROUTER_API_KEY")
   img_b64 <- base64encode(image_path)
@@ -59,35 +85,29 @@ ask_ai_vision <- function(prompt, image_path, model = MODELE_CHOISI, max_tokens 
 
 
 # ── BLOC 2 : TEST DE CONNEXION ───────────────────────────────
-# Exécutez ce bloc avant tout — ne passez à la suite que si ça répond
+# Vérifiez la réponse et ne passez à la suite que si ça répond
 
-ask_ai("Dis bonjour en français.")
+# Vous pouvez poser toutes les questions sous ce format :
+ask_ai("Dis-moi 'Hello world' en français.")
 
-# Vous pouvez poser toutes les questions sous ce format !
-# NB: si vous observez une réponse  tronquée :
+# NB: si vous observez une réponse  tronquée, vous pouvez augmenter le nombre de tokens :
 ask_ai("Votre question", max_tokens = 4000)
 
 # Pour garder la réponse dans une variable :
 reponse <- ask_ai("Votre question")
 
-
 # ── BLOC 4 : QUESTION SUR LA FIGURE HEATMAP ─────────────────
-
-# vérifiez que fig2A_Scerevisiae_heatmap_cible.png apparaît
-file.exists("fig2A_Scerevisiae_heatmap_cible.png")
 
 ask_ai_vision(
   prompt     = "Quelle est l'échelle de temps représentée sur l'axe x ?",
-  image_path = "fig2A_Scerevisiae_heatmap_cible.png"
+  image_path = fig2a
 )
 
 
 # ── BLOC 5 : QUESTION AVEC DONNÉES ──────────────────────────
 
-# vérifiez que cell-cycle_SCERE_iabioscripting2.txt apparaît
-file.exists("cell-cycle_SCERE_iabioscripting2.txt")
 
-table1 <- readLines("cell-cycle_SCERE_iabioscripting2.txt", n = 3)
+table1 <- readLines(data_table, n = 3)
 
 ask_ai(paste0(
   "Voici les 3 premières lignes de ma table d'expression :\n",
