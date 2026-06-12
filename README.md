@@ -41,17 +41,17 @@ Vidéos de la matinée: (à ajouter)
 
 ### Programme et inscription
 
-- <https://iabioscripting2.sciencesconf.org>|
+- <https://iabioscripting2.sciencesconf.org>
 
 ### Dépôt du code sur github
 
-- Organisation: **[A COMPLETER]**
-- Nomenclature pour votre entrepôt: **ia-bioscript26-XX**  *en remplaçant XX par votre numéro de groupe*
+- Organisation: **AI-BioSoftware** (<https://github.com/AI-BioSoftware>)
+- Nomenclature pour votre entrepôt: **ia-bioscript26-XX**  *en remplaçant XX par votre numéro de groupe* **en 2 digits** qui vous a été donné dans la salle
 
 
 ### Retour d'expérience
 
-- Formulaire de collecte en cours de synthèse
+- Formulaire : <https://forms.gle/EWbjEu2gwa8JHR7r7> 
 
 
 ## Ateliers pratiques de l'après-midi
