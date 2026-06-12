@@ -40,48 +40,38 @@ Vidéos de la matinée: (à ajouter)
 
 ## Ateliers pratiques de l'après-midi
 
-### Diaporama d'introduction aux sessions pratiques
 
-[3-1_acces-ressources-numeriques_atelier-IA-soft-biologie.pdf](slides/3-1_acces-ressources-numeriques_atelier-IA-soft-biologie.pdf)
+### Atelier 1 : Reproductibilité et FAIRisation
 
-- introduction aux ateliers pratiques
-- accès aux ressources numériques utilisés pour la pratique
-- présentation des deux ateliers
-
-### Atelier 1 : Scripting pour la bioanalyse
-
-- [Enoncé de l'exercice (en anglais)](exercise_yeast-cell-cycle)
-- [Jeu de données de test](data/yeast-transcriptome-cell-cycle) : profils transcriptomiques montrant des fluctuations périodiques durant le cycle cellulaire de la levure
+- Github repository: <https://github.com/IFB-ElixirFr/IA-BioSoftware-Workshop>
 
 ### Atelier 2 : Développement logiciel pour la biologie
 
-- <https://ifb-elixirfr.github.io/IA-BioSoftware-Atelier/>
+- Github repository: <https://github.com/IFB-ElixirFr/AI-bioscripting-workshop/> 
+- Github pages: <https://ifb-elixirfr.github.io/AI-bioscripting-workshop/> 
+- Data table [oscillating-genes_1705_normalized-profiles.tsv](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/oscillating-genes_1705_normalized-profiles.tsv): normalized counts (RPKM) for 1705 oscillating genes of *Saccharomyces cerevisiae*
+- [Figure 2a of the article](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/heatmap_yeast_cell-cycle.png)
 
-----
 
-## Ressources numériques
-
-| Ressource | Description | URL |
-|-----------|----------------------------------------------|-------------------------------|
-| Programme et inscriptions | Sur Sciencesconf |	https://iabioscripting.sciencesconf.org/ |
-| Site Web | Support du colloque (sur github pages) | <https://ifb-elixirfr.github.io/AI-for-scripting-bioanalysis/> |
-| Plateforme numérique Pléiade | IA génératives utilisées pour les ateliers pratiques de l'après-midi | <https://pleiade.mi.parisdescartes.fr/> |
-| Cluster IFB-core | Environnement OnDemand (RStudio, JupyterHub) à disposition des participants pour les ateliers pratiques | <https://ondemand.cluster.france-bioinformatique.fr/> |
-| Cluster IFB-core | demande de compte ou d'espaces-projets ; *des comptes temporaires seront fournis pour les ateliers pratiques, ce lien est utile uniquement si vous désirez continuer à utiliser le cluster après le colloque*	| <https://my.cluster.france-bioinformatique.fr/> |
 
 
 ----
 
 ## Organisation
 
-Le colloque est organisé et financé par les trois organisations suivantes :
+## Programme et inscription
+
+- <https://iabioscripting2.sciencesconf.org>|
+
+
+### Institutions
 
 - Institut Français de Bioinformatique (IFB)
 - Université Paris Cité (plateforme iPOP-UP et DU omiques)
 - Réseau métier en bioinformatique (MERIT)
 
 
-## Comité scientifique et de programmation
+### Comité scientifique et de programmation
 
 - [Bertrand Cosson](https://orcid.org/0000-0003-3401-7137) (Université Paris-Cité)
 - [Jacques van Helden](https://orcid.org/0000-0002-8799-8584) (Institut Français de Bioinformatique, Aix-Marseille Université) 
@@ -89,7 +79,7 @@ Le colloque est organisé et financé par les trois organisations suivantes :
 - [Thomas Denecker](https://orcid.org/0000-0003-1421-7641) (Institut Français de Bioinformatique)
 
 
-## Encadrants 2026
+### Encadrants 2026
 
 - [Bertrand Cosson](https://orcid.org/0000-0003-3401-7137) (Université Paris-Cité)
 - [Thomas Denecker](https://orcid.org/0000-0003-1421-7641) (Institut Français de Bioinformatique)
@@ -100,7 +90,7 @@ Le colloque est organisé et financé par les trois organisations suivantes :
 - [Jacques van Helden](https://orcid.org/0000-0002-8799-8584) (Institut Français de Bioinformatique, Aix-Marseille Université) 
 - [Lilia Younsi](https://www.linkedin.com/in/lilia-younsi/) (Inserm)
 
-## Autres contributions
+### Autres contributions
 
 Conception de l'atelier 2025 et préparation du jeu de données sur le cycle cellulaire de la levure. 
 
