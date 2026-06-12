@@ -1,9 +1,11 @@
 ## Initialisation
 
-| Script | Role | 
-|---------------------------------|------------------------------------—|
-| [download_cell-cycle_files.R](download_cell-cycle_files.R) | Create a directory for the analysis in the current working dir, and download the data files |
+| Script | Role |
+|-------------|------------|
+| [download_cell-cycle_files.R](download_cell-cycle_files.R) | [yeast-cell-cycle_ChatGPT-prompting.html](yeast-cell-cycle_ChatGPT-prompting.html) |
+| R markdown document to reproduce the progressive interactions and results  | Create a directory for the analysis in the current working dir, and download the data files  |
 | [tuto_ask_ai_bioscripting2026sc.R](tuto_ask_ai_bioscripting2026sc.R) | Initialize the API to query various LLM via OpenRouter |
+
 
 ## R solution of the exercise
 
