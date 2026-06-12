@@ -6,17 +6,21 @@
 ##
 
 # ---- Parameters ----
-REMOTE_BASE <- "https://ifb-elixirfr.github.io/AI-bioscripting-workshop"
-REMOTE_DATA_DIR <- file.path(REMOTE_BASE, "data/yeast-transcriptome-cell-cycle")
+# REMOTE_BASE <- "https://ifb-elixirfr.github.io/AI-bioscripting-workshop"
+# REMOTE_BASE <- "https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main"
+# REMOTE_BASE <- "https://github.com/IFB-ElixirFr/AI-bioscripting-workshop/tree/main/data/yeast-transcriptome-cell-cycle"
+REMOTE_BASE <- "https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/main/data/yeast-transcriptome-cell-cycle"
+
+
 WORK_DIR <- getwd() ## Adapt it as you like
-ANALYSIS_DIR <- file.path(WORK_DIR, "analysis_yeast-transcriptome-cell-cycle")
+ANALYSIS_DIR <- file.path(WORK_DIR, "analysis")
 
 ## Data table: normalised counts
 NORM_COUNTS_1705 <- "oscillating-genes_1705_normalized-profiles.tsv"
+# RAW_COUNTS_1705  <- "oscillating-genes_1705_raw-counts.tsv"
 HEATMAP_FIGURE <- "heatmap_yeast_cell-cycle.png"
-RAW_COUNTS_1705 <- "oscillating-genes_1705_normalized-profiles.tsv"
 
-message("\tREMOTE_DATA_DIR\t", REMOTE_DATA_DIR)
+message("\tREMOTE_BASE\t", REMOTE_BASE)
 message("\tANALYSIS_DIR\t", ANALYSIS_DIR)
 dir.create(ANALYSIS_DIR, showWarnings = FALSE, recursive = TRUE)
 
@@ -32,7 +36,7 @@ dir.create(ANALYSIS_DIR, showWarnings = FALSE, recursive = TRUE)
 #' @param filename The name to save the downloaded file as.
 #' @return The path of the downloaded file if successful, otherwise throws an error.
 #' @export
-download_and_check_dataset <- function(url, target_dir, filename) {
+download_and_check_dataset <- function(base_url, target_dir, filename) {
   # Create the target directory if it doesn't exist
   if (!dir.exists(target_dir)) {
     dir_create(target_dir)
@@ -40,13 +44,14 @@ download_and_check_dataset <- function(url, target_dir, filename) {
   
   # Define the full path for the output file
   file_path <- file.path(target_dir, filename)
+  file_url <-  file.path(base_url, filename)
   
   # Download the file (overwrite = TRUE ensures re-download if needed)
   if (file.exists(file_path)) {
     message("\tSkipping download, file already present\t", filename)
   } else {
     message("\tDownloading file\t", filename)
-    download.file(url, destfile = file_path, mode = "wb")
+    download.file(file_url, destfile = file_path, mode = "wb")
   }
   
   # Check if the file exists and is not empty
@@ -62,6 +67,7 @@ download_and_check_dataset <- function(url, target_dir, filename) {
 
 # ---- Download ----
 
-download_and_check_dataset(url = REMOTE_DATA_DIR, target_dir = ANALYSIS_DIR, filename = NORM_COUNTS_1705)
-download_and_check_dataset(url = REMOTE_DATA_DIR, target_dir = ANALYSIS_DIR, filename = HEATMAP_FIGURE)
+download_and_check_dataset(base_url = REMOTE_BASE, target_dir = ANALYSIS_DIR, filename = NORM_COUNTS_1705)
+download_and_check_dataset(base_url = REMOTE_BASE, target_dir = ANALYSIS_DIR, filename = RAW_COUNTS_1705)
+download_and_check_dataset(base_url = REMOTE_BASE, target_dir = ANALYSIS_DIR, filename = HEATMAP_FIGURE)
 
