@@ -17,7 +17,7 @@ ANALYSIS_DIR <- file.path(WORK_DIR, "analysis")
 
 ## Data table: normalised counts
 NORM_COUNTS_1705 <- "oscillating-genes_1705_normalized-profiles.tsv"
-# RAW_COUNTS_1705  <- "oscillating-genes_1705_raw-counts.tsv"
+RAW_COUNTS_1705  <- "oscillating-genes_1705_raw-counts.tsv"
 HEATMAP_FIGURE <- "heatmap_yeast_cell-cycle.png"
 
 message("\tREMOTE_BASE\t", REMOTE_BASE)
@@ -71,3 +71,4 @@ download_and_check_dataset(base_url = REMOTE_BASE, target_dir = ANALYSIS_DIR, fi
 download_and_check_dataset(base_url = REMOTE_BASE, target_dir = ANALYSIS_DIR, filename = RAW_COUNTS_1705)
 download_and_check_dataset(base_url = REMOTE_BASE, target_dir = ANALYSIS_DIR, filename = HEATMAP_FIGURE)
 
+message("Downloaded data files in local directory\t", ANALYSIS_DIR)
