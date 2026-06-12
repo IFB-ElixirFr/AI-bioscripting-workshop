@@ -45,8 +45,11 @@ Vidéos de la matinée: (à ajouter)
 
 ### Dépôt du code sur github
 
-- Organisation: **AI-BioSoftware** (<https://github.com/AI-BioSoftware>)
-- Nomenclature pour votre entrepôt: **ia-bioscript26-XX**  *en remplaçant XX par votre numéro de groupe* **en 2 digits** qui vous a été donné dans la salle
+- **Organisation github**: AI-BioSoftware (<https://github.com/AI-BioSoftware>)
+
+- **Votre entrepôt:** *ia-bioscript26-XX*
+
+    - Remplacez XX par votre numéro de groupe en 2 digits
 
 
 ### Retour d'expérience
@@ -90,7 +93,7 @@ Vidéos de la matinée: (à ajouter)
     - Les paramètres retenus en Phase 1
     - Vos exigences : documentation, gestion des erreurs
 
-3. Exécutez sur le cluster IFB (JupyterHub ou RStudio) ou Pléiade
+3. Exécutez sur l'instance RStudio de la salle ou sur l'ordinateur de votre choix
 4. Itérez jusqu’à obtenir une figure satisfaisante
 5. Comparez visuellement votre figure à la cible
 
@@ -100,7 +103,8 @@ Vidéos de la matinée: (à ajouter)
 
 *Le pipeline détecte-t-il de la périodicité là où il n’y en a pas ?*
 
-- Ouvrez le fichier cell-cycle_SCERE_iabioscripting2_permuted.txt fourni par les organisateurs
+- Téléchargez le fichier [oscillating-genes_1705_normalized-profiles_permuted.tsv](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/oscillating-genes_1705_normalized-profiles_permuted.tsv) 
+- Ouvrez-le et explorez son contenu
 - Ce fichier contient les mêmes gènes et les mêmes valeurs d’expression que le fichier original, mais les 50 points temporels ont été permutés aléatoirement (seed = 42) — la périodicité temporelle est donc détruite
 - Dans votre script, remplacez uniquement le nom du fichier d’entrée par le fichier permuté — ne modifiez rien d’autre
 - Relancez le script et observez la figure produite
@@ -134,7 +138,7 @@ Vidéos de la matinée: (à ajouter)
 - Github repository: <https://github.com/IFB-ElixirFr/AI-bioscripting-workshop/> 
 - Github pages: <https://ifb-elixirfr.github.io/AI-bioscripting-workshop/> 
 - Data table [oscillating-genes_1705_normalized-profiles.tsv](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/oscillating-genes_1705_normalized-profiles.tsv): normalized counts (RPKM) for 1705 oscillating genes of *Saccharomyces cerevisiae*
-- [Figure 2a of the article](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/heatmap_yeast_cell-cycle.png)
+- Permuted Data table [oscillating-genes_1705_normalized-profiles_permuted.tsv](https://raw.githubusercontent.com/IFB-ElixirFr/AI-bioscripting-workshop/refs/heads/main/data/yeast-transcriptome-cell-cycle/oscillating-genes_1705_normalized-profiles_permuted.tsv): random permutation of the normalized count table. 
 
 
 ----
